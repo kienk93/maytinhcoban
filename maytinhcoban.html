@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .aa {
+           text-align: right;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table  style="border: 1px solid black; width: 400px;height: 400px; text-align: center">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="oTinhToanTu">
+        <td></td>
+        <td  colspan="7" value="" style="border:1px solid black;width: 400px;height: 60px" id="oTinhToan"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button style="height: 40px;width: 40px">Rad</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number()" value="">$</button></td></td>
+        <td><button style="height: 40px;width: 40px">!X</button></td>
+        <td><button style="height: 40px;width: 40px">)</button></td>
+        <td><button style="height: 40px;width: 40px">(</button></td>
+        <td><button style="height: 40px;width: 40px">%</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="reset()" value="">AC</button></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button style="height: 40px;width: 40px">Inv</button></td>
+        <td><button style="height: 40px;width: 40px">Sin</button></td>
+        <td><button style="height: 40px;width: 40px">In</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number(1)" value="">1</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number(2)" value="">2</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number(3)" value="">3</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number('/')" value="">/</button></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number()" value="">pi</button></td>
+        <td><button style="height: 40px;width: 40px">cos</button></td>
+        <td><button style="height: 40px;width: 40px">Log</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number(4)" value="">4</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number(5)" value="">5</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number(6)" value="">6</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number('*')" value="">*</button></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button style="height: 40px;width: 40px">e</button></td>
+        <td><button style="height: 40px;width: 40px">tan</button></td>
+        <td><button style="height: 40px;width: 40px">V</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number(7)" value="">7</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number(8)" value="">8</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number(9)" value="">9</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number('+')" value="">+</button></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="background-color: #555555"><button style="border:none;width: 50px;height: 50px;background-color: #555555">Asn</button></td>
+        <td><button style="height: 40px;width: 40px">EXP</button></td>
+        <td><button style="height: 40px;width: 40px">x<sup>14</sup></button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number(0)" value="">0</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number('.')" value="">.</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="result()" value="">=</button></td>
+        <td><button style="height: 40px;width: 40px" type="button" name="" onclick="number('+')" value="">+</button></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+</body>
+</html>
+<script>
+    function number(value) {
+        document.getElementById('oTinhToan').innerHTML += value;
+    }
+    function result() {
+        document.getElementById('oTinhToan').innerHTML = eval(document.getElementById('oTinhToan').innerHTML);
+    }
+    function reset() {
+        document.getElementById("oTinhToan").innerHTML = '';
+    }
+</script>
